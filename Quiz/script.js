@@ -38,7 +38,7 @@ var allQuestions =  [
     "question":"In which city does the India government reside?",
     "choices":["Nagpur","Delhi","Vishakapattnam","Gaya"],
     "correctAnswer":1
-  }
+  },
   {
     "question":"In which city does the UP government reside?",
     "choices":["Lucknow","Allahabad","Kanpur","Mirzapur"],

@@ -20,24 +20,29 @@ var startButton = document.getElementById("startButton"),
 
 var allQuestions =  [
 	{
-    "question":"Who is President of the United States? /n 1. We Who is President of the United States? /n 2. Who is President of the United States? Who is President of the United States?  ",
-    "choices":["Donald Trump Who is President of the Unite Who is President of the United States? /n 1. We Who is President of the United States? /nd States? 1.","Hillary Clinton Who is President of the United States? 1.","Barack Who Who is President of the United States? /n 1. We Who is President of the United States? /n Who is President of the United States? /n 1. We Who is President of the United States? /n Who is President of the United States? /n 1. We Who is President of the United States? /n is President of the United States? 1. Obama","Joe Who is President of the United States? 1. Biden"],
-    "correctAnswer":0
-  },
-  {
-    "question":"Who is Prime Minister of the United Kingdom?",
-    "choices":["David Cameron","Gordon Brown","Theresa May","Boris Johnson"],
+    "question":"Who is President of the United States?   ",
+    "choices":["Donald Trump","Hillary Clinton","Barack Obama","Joe Biden"],
     "correctAnswer":3
   },
   {
-    "question":"Who is Prime Minister of the Netherlands?",
-    "choices":["Hugo de Jonge","Marc Rutte","Geert Wilders","Kajsa Ollongren"],
-    "correctAnswer":1
+    "question":"Who is Prime Minister of the United Kingdom?",
+    "choices":["David Cameron","Gordon Brown","No PM right now","Boris Johnson"],
+    "correctAnswer":2
   },
   {
-    "question":"In which city does the Dutch government reside?",
-    "choices":["Rotterdam","Amsterdam","The Hague","Utrecht"],
+    "question":"Who is Prime Minister of the India?",
+    "choices":["Rahul ji","Kejriwal Ji","Modi ji","Yogi ji"],
     "correctAnswer":2
+  },
+  {
+    "question":"In which city does the India government reside?",
+    "choices":["Nagpur","Delhi","Vishakapattnam","Gaya"],
+    "correctAnswer":1
+  }
+  {
+    "question":"In which city does the UP government reside?",
+    "choices":["Lucknow","Allahabad","Kanpur","Mirzapur"],
+    "correctAnswer":0
   }
   ];
 

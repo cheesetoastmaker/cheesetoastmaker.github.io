@@ -1,0 +1,343 @@
+{
+    "quiz":
+        [
+        {
+            "question": "Choose true sentence about qmake:",
+             "answers": [
+                 {"key":"A", "txt": "It is possible to generate both - Makefile and .pro file - with the use of qmake."},
+                 {"key":"B", "txt":"Qmake can generate Makefile, but it is not possible to generate .pro file with qmake,"},
+                 {"key":"C", "txt":"Qmake compiles the project."}      
+             ],
+            "correct": "A",
+            "hint": "In the default mode, qmake will use the description in a project file to generate a Makefile, but it is also possible to use qmake to generate project files. Source: <a href='http://doc.qt.io/qt-4.8/qmake-running.html' target='_blank'>http://doc.qt.io/qt-4.8/qmake-running.html</a>"
+        },
+        {
+            "question": "Choose <font color='red'>false</font> sentence about QString.",
+             "answers": [
+                 {"key":"A", "txt": "QString stores the string with the use of 8-bits characters,"},
+                 {"key":"B", "txt":"QString is implemented with the use of implicit sharing for the best memory usage and performance,"},
+                 {"key":"C", "txt":"QString is the part of the QtCore module."}      
+             ],
+            "correct": "A",
+            "hint": "QString stores a string of 16-bit QChars, where each QChar corresponds one Unicode 4.0 character. Source: <a href='http://doc.qt.io/qt-5/qstring.html' target='_blank'>http://doc.qt.io/qt-5/qstring.html</a>"
+        },
+        {
+            "question": "Choose  <font color='red'>false</font> sentence about Q_OBJECT macro.",
+             "answers": [
+                 {"key":"A", "txt": "Q_OBJECT macro must appear in the public section of the class,"},
+                 {"key":"B", "txt":"Q_OBJECT macro requires that the class in which it appears derive from QObject,"},
+                 {"key":"C", "txt":"Q_OBJECT macro is needed by classes that define signals and slots."}      
+             ],
+            "correct": "A",
+            "hint": "The Q_OBJECT macro must appear in the private section of a class definition that declares its own signals and slots or that uses other services provided by Qt's meta-object system. Source: <a href='http://doc.qt.io/qt-5/qobject.html#Q_OBJECT' target='_blank'>http://doc.qt.io/qt-5/qobject.html</a>"
+        },
+        {
+            "question": "The TEMPLATE variable in .pro file can have following values:",
+             "answers": [
+                 {"key":"A", "txt":"app, desktop, mobile,"},
+                 {"key":"B", "txt":"app, lib, subdirs,"},
+                 {"key":"C", "txt":"app, qt4, qt5,"},
+                 {"key":"D", "txt":"app, debug, release."}      
+             ],
+            "correct": "B",
+            "hint": "TEMPLATE can have values: app, lib, subdirs, vcapp, vclib, vcsubdirs. Source: <a href='http://doc.qt.io/qt-4.8/qmake-project-files.html#project-templates' target='_blank'>http://doc.qt.io/qt-4.8/qmake-project-files.html</a>"
+        },
+        {
+            "question": "What happens when the object of class QObject is copied?",
+             "answers": [
+                 {"key":"A", "txt": "The <code>QObject::objectName()</code> is also copied and is identical for both objects,"},
+                 {"key":"B", "txt":"All the signals/slot connections are transferred to the copy,"},
+                 {"key":"C", "txt":"It’s impossible to copy the QObject and all its subclasses."}      
+             ],
+            "correct": "C",
+            "hint": "QObject and all subclasses of QObject (direct or indirect) have their copy constructor and assignment operator disabled. Source: <a href='http://doc.qt.io/qt-5/object.html#identity-vs-value' target='_blank'>http://doc.qt.io/qt-5/object.html#identity-vs-value</a>"
+        },
+        {
+            "question": "Qt5 introduces new style of connect with the use of function pointers, like presented below:<pre class='prettyprint'>connect( slider, &QSlider::valueChanged, spinbox, &QSpinBox::setValue );</pre>The old Qt4 style was using SIGNAL() and SLOT() macros:<pre class='prettyprint'>connect(slider, SIGNAL(valueChanged(int)), spinbox, SLOT(setValue(int)));</pre> One of the advantages of Qt5 style is that:",
+             "answers": [
+                 {"key":"A", "txt": "it allows to connect overloaded slots easier,"},
+                 {"key":"B", "txt":"errors can be detected earlier, at compilation stage,"},
+                 {"key":"C", "txt":"Q_OBJECT macro is not needed for signals and slots anymore."}      
+             ],
+            "correct": "B",
+            "hint": "Pros of new syntax:<br>- Compile time check of the existence of the signals and slot, of the types, or if the Q_OBJECT is missing.<br>- Argument can be by typedefs or with different namespace specifier, and it works.<br>- Possibility to automatically cast the types if there is implicit conversion (e.g. from QString to QVariant)<br>- It is possible to connect to any member function of QObject, not only slots.<br>Source: <a href='https://wiki.qt.io/New_Signal_Slot_Syntax' target='_blank'>https://wiki.qt.io/New_Signal_Slot_Syntax</a>"
+        },
+        {
+            "question": "What is <font color='red'>impossible</font> regarding signals and slots?",
+             "answers": [
+                 {"key":"A", "txt": "Signal to signal connection,"},
+                 {"key":"B", "txt":"Connecting signal with no parameter to the slot with parameter, like:<br><code>connect(slider, SIGNAL(updated()), spinbox, SLOT(valueChanged(int)));</code>"},
+                 {"key":"C", "txt":"Connecting signal with a parameter to the slot with no parameters, like:<br><code>connect(slider, SIGNAL(valueChanged(int)), spinbox, SLOT(update()));</code>"}      
+             ],
+            "correct": "B",
+            "hint": "The signature of a signal must match the signature of the receiving slot. (In fact a slot may have a shorter signature than the signal it receives because it can ignore extra arguments.) Source: <a href='http://doc.qt.io/qt-5/signalsandslots.html' target='_blank'>http://doc.qt.io/qt-5/signalsandslots.html</a>"
+        },
+        {
+            "question": "Q_GADGET macro:",
+             "answers": [
+                 {"key":"A", "txt": "allows to have signal and slots for the classes that do not inherit from QObject,"},
+                 {"key":"B", "txt":"enables some features of QMetaObject, i.e. Q_ENUM, Q_PROPERTY and Q_INVOKABLE,"},
+                 {"key":"C", "txt":"can be put only into the QObject subclasses."}      
+             ],
+            "correct": "B",
+            "hint": "The Q_GADGET macro is a lighter version of the Q_OBJECT macro for classes that do not inherit from QObject but still want to use some of the reflection capabilities offered by QMetaObject. Q_GADGETs can have Q_ENUM, Q_PROPERTY and Q_INVOKABLE, but they cannot have signals or slots. Source: <a href='http://doc.qt.io/qt-5/qobject.html#Q_GADGET' target='_blank'>http://doc.qt.io/qt-5/qobject.html#Q_GADGET</a> "
+        },
+        {
+            "question": "When Qt program enters the event loop?",
+             "answers": [
+                 {"key":"A", "txt": "When the int main() is entered,"},
+                 {"key":"B", "txt":"when QCoreApplication object is created,"},
+                 {"key":"C", "txt":"when QApplication.exec() is called."}      
+             ],
+            "correct": "C",
+            "hint": "<code>int QApplication::exec()</code> enters the main event loop and waits until <code>exit()</code> is called, then returns the value that was set to <code>exit()</code> (which is 0 if <code>exit()</code> is called via <code>quit()</code>). Source: <a href='http://doc.qt.io/qt-4.8/qapplication.html#exec' target='_blank'>http://doc.qt.io/qt-4.8/qapplication.html#exec</a>"
+        },
+        {
+            "question": "Choose <font color='red'>false</font> sentence about moc.",
+             "answers": [
+                 {"key":"A", "txt":"Moc is a Meta-Object Compiler,"},
+                 {"key":"B", "txt":"Moc produces moc files, which are ordinary C++ files,"},
+                 {"key":"C", "txt":"Moc is unable to implement signals and slots for class templates,"},
+                 {"key":"D", "txt":"Moc expands <code>#define</code>-s normally, so type macros can be used as signal argument."}   
+             ],
+            "correct": "D",
+            "hint": "Since moc doesn't expand #defines, type macros that take an argument will not work in signals and slots. Source: <a href='http://doc.qt.io/qt-4.8/moc.html#type-macros-cannot-be-used-for-signal-and-slot-parameters' target='_blank'>http://doc.qt.io/qt-4.8/moc.html#type-macros-cannot-be-used-for-signal-and-slot-parameters</a>"
+        },
+        {
+            "question": "QObjects organize themselves in object trees. It means that:",
+             "answers": [
+                 {"key":"A", "txt": "each QObject can have a list of parents and a list of children,"},
+                 {"key":"B", "txt":"each QObject can have a parent and a list of children,"},
+                 {"key":"C", "txt":"they are stored in memory with the use of binary tree."}      
+             ],
+            "correct": "B",
+            "hint": "QObjects organize themselves in object trees. When you create a QObject with another object as parent, it's added to the parent's <code>children()</code> list, and is deleted when the parent is. Source: <a href='http://doc.qt.io/qt-4.8/objecttrees.html' target='_blank'>http://doc.qt.io/qt-4.8/objecttrees.html</a>"
+        },
+        {
+            "question": "What happens when the QObject-parent is deleted before its children?",
+             "answers": [
+                 {"key":"A", "txt": "There is a memory leak,"},
+                 {"key":"B", "txt":"The children are deleted too,"},
+                 {"key":"C", "txt":"The children' parent-pointers point to invalid location, so the program may crash."}      
+             ],
+            "correct": "B",
+            "hint": "When you create a QObject with another object as parent, it's added to the parent's <code>children()</code> list, and is deleted when the parent is. It turns out that this approach fits the needs of GUI objects very well. For example, a QShortcut (keyboard shortcut) is a child of the relevant window, so when the user closes that window, the shorcut is deleted too. Source: <a href='http://doc.qt.io/qt-4.8/objecttrees.html' target='_blank'>http://doc.qt.io/qt-4.8/objecttrees.html</a>"
+        },
+        {
+            "question": "What is the base class of everything that appears on the screen within the Qt4 Widget application?",
+             "answers": [
+                 {"key":"A", "txt":"QWidget,"},
+                 {"key":"B", "txt":"QApplication,"},
+                 {"key":"C", "txt":"QGraphicsView."}      
+             ],
+            "correct": "A",
+            "hint": "QWidget is the base class of everything that appears on the screen. Source: <a href='http://doc.qt.io/qt-4.8/objecttrees.html' target='_blank'>http://doc.qt.io/qt-4.8/objecttrees.html</a>"
+        },
+        {
+            "question": "What happens, when you try connect signal and slot, which are already connected (the same sender and receiver)?",
+             "answers": [
+                 {"key":"A", "txt": "Duplicate connection will be created, and for every signal <code>emit()</code> the corresponding slot will be called two times,"},
+                 {"key":"B", "txt":"<code>connect()</code> will fail and return false; the connection will remain single,"},
+                 {"key":"C", "txt":"If the connection type was <code>Qt::UniqueConnection</code>, the code will not compile."}      
+             ],
+            "correct": "A",
+            "hint": "By default, for every connection you make, a signal is emitted; two signals are emitted for duplicate connections. You can break all of these connections with a single <code>disconnect()</code> call. If you pass the <code>Qt::UniqueConnection</code> type, the connection will only be made if it is not a duplicate. If there is already a duplicate (exact same signal to the exact same slot on the same objects), the connection will fail and connect will return false. Source: <a href='http://doc.qt.io/qt-4.8/signalsandslots.html' target='_blank'>http://doc.qt.io/qt-4.8/signalsandslots.html</a>"
+        },
+        {
+            "question": "What will happen if you instantiate <code>QVector &lt;QWidget&gt;</code>?",
+             "answers": [
+                 {"key":"A", "txt":"The compiler will complain that QWidget's copy constructor and assignment operators are disabled,"},
+                 {"key":"B", "txt":"The compiler will complain that QWidget is not registrated as meta-object,"},
+                 {"key":"C", "txt":"The code will compile, but the program will result in undefined behaviour."}      
+             ],
+            "correct": "A",
+            "hint": "The values stored in the various containers can be of any assignable data type. To qualify, a type must provide a default constructor, a copy constructor, and an assignment operator. If you attempt to instantiate a QList&lt;QWidget&gt;, the compiler will complain that QWidget's copy constructor and assignment operators are disabled. If you want to store these kinds of objects in a container, store them as pointers, for example as QList&lt;QWidget *&gt;. Source: <a href='http://doc.qt.io/qt-5/containers.html' target='_blank'>http://doc.qt.io/qt-5/containers.html</a>"
+        },
+        {
+            "question": "Which one class is not a part of the QtCore?",
+             "answers": [
+                 {"key":"A", "txt":"QFile,"},
+                 {"key":"B", "txt":"QThread,"},
+                 {"key":"C", "txt":"QColor."}      
+             ],            
+            "correct": "C",
+            "hint": "QColor is a part of QtGui module. Source: <a href='http://doc.qt.io/qt-5/qtgui-module.html' target='_blank'>http://doc.qt.io/qt-5/qtgui-module.html</a>"
+        },
+        {
+            "question": "What happens when you set a parent to QObject twice, i.e. <pre class='prettyprint'>objectA.setParent(objectB);<br>objectA.setParent(objectC);</pre> ",
+             "answers": [
+                 {"key":"A", "txt":"The objectB will stay as the parent of objectA; it's not possible to change the parent once it's set,"},
+                 {"key":"B", "txt":"The pointer to objectA will be removed from objectB children list, and will be added to objectC children list,"},
+                 {"key":"C", "txt":"The pointer to objectA will be present on both: objectB children list and objectC children list."}      
+             ],  
+            "correct": "B",
+            "hint": "Setting the parent of one object implicitly adds its address to the child list of the other, for example <code>objA->setParent(objB);</code> adds the objA pointer to the child list of objB. If we subsequently have <code>objA->setParent(objC);</code> then the objA pointer is removed from the child list of objB and added to the child list of objC . We call such an action reparenting. Source: <i>An Introduction to Design Patterns in C++ with Qt 4, Chapter 9: QObject</i>, Alan Ezust, Paul Ezust."
+        },
+        {
+            "question": "When a QWidget is placed inside QLayout,",
+             "answers": [
+                 {"key":"A", "txt":"this QLayout becomes the parent of QWidget,"},
+                 {"key":"B", "txt":"this QWidget becomes the parent of QLayout,"},
+                 {"key":"C", "txt":"there is no child-parent relationship between them."}      
+             ],
+            "correct": "C",
+            "hint": "Widgets in a layout are not children of the layout—they are children of the widget that owns the layout. Only a widget can be the parent of another widget. Source: <i>An Introduction to Design Patterns in C++ with Qt 4, Chapter 9.3.1: Layouts, first look</i>, Alan Ezust, Paul Ezust."
+        },
+        {
+            "question": "Is it possible to create a class that inherits from two base classes, one of which is QObject?",
+             "answers": [
+                 {"key":"A", "txt": "Yes, but only if the QObject base class is put first like: <code> class SomeClass : public QObject, public OtherClass {};</code>"},
+                 {"key":"B", "txt":"Yes, but only if the inheritance is marked as <i>virtual</i>,"},
+                 {"key":"C", "txt":"No, multiple inheritance is not possible with QObjects."}      
+             ],
+            "correct": "A",
+            "hint": "If you are using multiple inheritance, moc assumes that the first inherited class is a subclass of QObject. Also, be sure that only the first inherited class is a QObject. Source: <a href='http://doc.qt.io/qt-5/moc.html#multiple-inheritance-requires-qobject-to-be-first' target='_blank'>http://doc.qt.io/qt-5/moc.html#multiple-inheritance-requires-qobject-to-be-first</a>"
+        },
+        {
+            "question": "What happens when you provide the signal body implementation?",
+             "answers": [
+                 {"key":"A", "txt":"Signals don't have implementation, so the code will be ignored by compiler,"},
+                 {"key":"B", "txt":"The code may don't compile or don't link, depending on where the implementation was done in source code,"},
+                 {"key":"C", "txt":"The implementation will overwrite usual implementation done by moc and the code will not work as intended."}      
+             ],
+            "correct": "B",
+            "hint": "Code won't compile if the redundant definition (signal body) is in header. Code won't link if the redundant definition is in .cpp file. Source: tested with code."
+        },
+        {
+            "question": "<code>Qt::ConnectionType::AutoConnection</code> means, that",
+             "answers": [
+                 {"key":"A", "txt":"the slot is invoked immediately, when the signal is emitted,"},
+                 {"key":"B", "txt":"the slot is invoked when control returns to the event loop of the receiver's thread,"},
+                 {"key":"C", "txt":"when the sender and receiver are living in the same thread, then the slot is invoked immediately, otherwise the slot is invoked when control returns to the event loop of the receiver's thread."}      
+             ],
+            "correct": "C",
+            "hint": "AutoConnection (default Qt::ConnectionType): the signal is emitted in the thread which the receiving object has affinity then the behavior is the same as the Direct Connection. Otherwise, the behavior is the same as the Queued Connection. Source: <a href='http://doc.qt.io/qt-5/threads-qobject.html#signals-and-slots-across-threads' target='_blank'>http://doc.qt.io/qt-5/threads-qobject.html#signals-and-slots-across-threads</a>"
+        },
+        {
+            "question": "Which of the following is not a Qt container?",
+             "answers": [
+                 {"key":"A", "txt":"QCache&lt;Key,T&gt;,"},
+                 {"key":"B", "txt":"QSet&lt;T&gt;,"},
+                 {"key":"C", "txt":"QMultiMap&lt;Key,T&gt;,"},
+                 {"key":"D", "txt":"QForwardList&lt;T&gt;,"},
+                 {"key":"E", "txt":"all of above are valid Qt containers."}
+             ],
+            "correct": "D",
+            "hint": "In the time of creating this quiz (11.2015) the QForwardList does not exist."
+        },
+        {
+            "question": "Which Qt class allows to start external program from Qt application?",
+             "answers": [
+                 {"key":"A", "txt":"QProcess,"},
+                 {"key":"B", "txt":"QPluginLoader,"},
+                 {"key":"C", "txt":"QRunnable."}
+             ],
+            "correct": "A",
+            "hint": "The QProcess class is used to start external programs and to communicate with them. Source: <a href='http://doc.qt.io/qt-5/qprocess.html' target='_blank'>http://doc.qt.io/qt-5/qprocess.html</a>"
+        },
+        {
+            "question": "Choose true sentence about Qt Property system.",
+             "answers": [
+                 {"key":"A", "txt":"A property behaves like a class data member, but it has additional features accessible through the Meta-Object System,"},
+                 {"key":"B", "txt":"A READ and WRITE accessors functions are required to create property,"},
+                 {"key":"C", "txt":"Writing to properties via <code>object->setProperty(name, value)</code> gives better diagnostics at compile time, but it slower than setting the same values through member functions."}
+             ],
+            "correct": "A",
+            "hint": "A property behaves like a class data member, but it has additional features accessible through the Meta-Object System. Accessing a property through its WRITE accessor is the better of the two, because it is faster and gives better diagnostics at compile time, but setting the property this way requires that you know about the class at compile time. Accessing properties by name lets you access classes you don't know about at compile time. Source: <a href='http://doc.qt.io/qt-4.8/properties.html#reading-and-writing-properties-with-the-meta-object-system' target='_blank'>http://doc.qt.io/qt-4.8/properties.html#reading-and-writing-properties-with-the-meta-object-system</a>"
+        },
+        {
+            "question": "The purpose of Qt Resource system is to provide mechanism for:",
+             "answers": [
+                 {"key":"A", "txt":"accessing files available on the web,"},
+                 {"key":"B", "txt":"storing binary files in the application executable,"},
+                 {"key":"C", "txt":"accessing binary files on the system of the end user."}
+             ],
+            "correct": "B",
+            "hint": "The Qt resource system is a platform-independent mechanism for storing binary files in the application's executable. This is useful if your application always needs a certain set of files (icons, translation files, etc.) and you don't want to run the risk of losing the files. Source: <a href='http://doc.qt.io/qt-5/resources.html' target='_blank'>http://doc.qt.io/qt-5/resources.html</a>"
+        },
+        {
+            "question": "Qt Quick is a collection of several technologies. Which one is not a part of it?",
+             "answers": [
+                 {"key":"A", "txt":"QML,"},
+                 {"key":"B", "txt":"html,"},
+                 {"key":"C", "txt":"javascript,"},
+                 {"key":"D", "txt":"Qt C++."}
+             ],
+            "correct": "B",
+            "hint": "Qt Quick itself is a collection of several technologies: QML - Markup language for user interfaces, JavaScript - The dynamic scripting language, Qt C++ - The highly portable enhanced c++ library. Source: <a href='http://qmlbook.github.io/en/ch01/index.html#qt-quick' target='_blank'>http://qmlbook.github.io/en/ch01/index.html#qt-quick</a>"
+        },
+        {
+            "question": "All visual items in Qt Declarative (QML) inherit from:",
+             "answers": [
+                 {"key":"A", "txt":"Item,"},
+                 {"key":"B", "txt":"Component,"},
+                 {"key":"C", "txt":"QWidget."}
+             ],
+            "correct": "A",
+            "hint": "All visual items in Qt Declarative inherit from Item. Source: <a href='http://doc.qt.io/qt-4.8/qml-item.html#details' target='_blank'>http://doc.qt.io/qt-4.8/qml-item.html#details</a>"
+        },
+        {
+            "question": "You want to create C++ class that is usable from QML and drawable. The C++ class must:",
+             "answers": [
+                 {"key":"A", "txt":"Inherit from QObject,"},
+                 {"key":"B", "txt":"Declare its properties using the Q_PROPERTY macro,"},
+                 {"key":"C", "txt":"override paint() method,"},
+                  {"key":"D", "txt":"All of above."}
+             ],
+            "correct": "D",
+            "hint": "Source: <a href='http://doc.qt.io/qt-5/qtqml-tutorials-extending-qml-example.html#chapter-1-creating-a-new-type' target='_blank'>http://doc.qt.io/qt-5/qtqml-tutorials-extending-qml-example.html#chapter-1-creating-a-new-type</a>"
+        },
+        {
+            "question":"<code>QGraphicsItem::ItemHasNoContents</code> flag enabled means that:",
+             "answers": [
+                 {"key":"A", "txt":"the QGraphicsItem object has no properties defined,"},
+                 {"key":"B", "txt":"the attempt to paint the QGraphicsItem failed,"},
+                 {"key":"C", "txt":"the item does not paint anything,"},
+                  {"key":"D", "txt":"the item is a panel."}
+             ],
+            "correct": "C",
+            "hint": "<code>QGraphicsItem::ItemHasNoContents</code> means that the item does not paint anything (i.e., calling paint() on the item has no effect). You should set this flag on items that do not need to be painted to ensure that Graphics View avoids unnecessary painting preparations. This flag was introduced in Qt 4.6. Source: <a href='http://doc.qt.io/qt-4.8/qgraphicsitem.html' target='_blank'>http://doc.qt.io/qt-4.8/qgraphicsitem.html</a>"
+        },
+        {
+            "question":"Choose <font color='red'>false</font> sentence about <code>Q_INVOKABLE</code> macro.",
+             "answers": [
+                 {"key":"A", "txt":"<code>Q_INVOKABLE</code> makes the method available to the Qt Meta-Object system,"},
+                 {"key":"B", "txt":"<code>Q_INVOKABLE</code> allows to access methods from QML code,"},
+                 {"key":"C", "txt":"Qt slots do not require <code>Q_INVOKABLE</code> to be accessible from QML,"},
+                  {"key":"D", "txt":"<code>Q_INVOKABLE</code> methods are only possible in QObjects."}
+             ],
+            "correct": "D",
+            "hint": "The Q_GADGET macro is a lighter version of the Q_OBJECT macro for classes that do not inherit from QObject. Q_GADGETs can have Q_ENUM, Q_PROPERTY and Q_INVOKABLE, but they cannot have signals or slots. Source: <a href='http://doc.qt.io/qt-5/qobject.html#Q_GADGET' target='_blank'>http://doc.qt.io/qt-5/qobject.html#Q_GADGET</a>"
+        },
+        {
+            "question":"Throwing an exception from a Qt slot can result in undefined behaviour, when:",
+             "answers": [
+                 {"key":"A", "txt":"the slot was invoked by signal-slot connection and the exception is not handled within this slot,"},
+                 {"key":"B", "txt":"the slot was invoked directly or by signal-slot connection and the exception is not handled within this slot,"},
+                 {"key":"C", "txt":"the slot was invoked by signal-slot connection, no matter if it is handled within this slot or not."}
+             ],
+            "correct": "A",
+            "hint": "Throwing an exception from a slot invoked by Qt's signal-slot connection mechanism is considered undefined behaviour, unless it is handled within the slot. Source: <a href='http://doc.qt.io/qt-5/exceptionsafety.html#signals-and-slots' target='_blank'>http://doc.qt.io/qt-5/exceptionsafety.html#signals-and-slots</a>"
+        },
+        {
+            "question":"QML object's <b>id</b> attribute:",
+             "answers": [
+                 {"key":"A", "txt":"can be read and set during runtime just like any other QML object attribute,"},
+                 {"key":"B", "txt":"can begin with a lowercase or uppercase letter or an underscore,"},
+                 {"key":"C", "txt":"is optional, but recommended."}
+             ],
+            "correct": "C",
+            "hint": "Id must begin with a lower-case letter or an underscore. Once an object instance is created, the value of its id attribute cannot be changed. Source: <a href='http://doc.qt.io/qt-5/qtqml-syntax-objectattributes.html#the-id-attribute' target='_blank'>http://doc.qt.io/qt-5/qtqml-syntax-objectattributes.html#the-id-attribute</a>"
+        },
+        {
+            "question":"Setting QML object's <b>z</b> property to negative value will cause that:",
+             "answers": [
+                 {"key":"A", "txt":"this object goes to top in case of overlapping siblings objects,"},
+                 {"key":"B", "txt":"this object goes to bottom in case of overlapping sibling objects,"},
+                 {"key":"C", "txt":"It impossible, <b>z</b> property can only have positive value."}
+             ],
+            "correct": "B",
+            "hint": "Items with a negative stacking value are drawn under their parent's content. Source: <a href='http://doc.qt.io/qt-5/qml-qtquick-item.html#z-prop' target='_blank'>http://doc.qt.io/qt-5/qml-qtquick-item.html#z-prop</a>"
+        }  
+    ]
+}

@@ -1,8 +1,9 @@
 body {
     font-family: "Ubuntu","Verdana","Times", Georgia, Serif;
     text-align: center;
-    padding: 50px;
+    padding: 5px;
     line-height: 180%;
+    font-size: 24px;
 }
 
 p {

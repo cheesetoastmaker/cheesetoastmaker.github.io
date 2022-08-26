@@ -21,7 +21,7 @@ body {
 div {
   --shadow-pos: ;
   --shadow-grow: 1em;
-  width: min(360px, 80%);
+  width: min(750px, 80%);
   padding: 2em;
   text-align: center;
   font-variant-numeric: tabular-nums;

@@ -4,3 +4,4 @@ document.getElementsByTagName("h1")[0].style.fontSize = "6vw";
 document.getElementsByTagName("p")[0].style.fontSize = "6vw";
 document.getElementsByTagName("h2")[0].style.fontSize = "6vw";
 document.getElementsByTagName("ul")[0].style.fontSize = "6vw";
+document.getElementsByTagName("tr")[0].style.fontSize = "6vw";

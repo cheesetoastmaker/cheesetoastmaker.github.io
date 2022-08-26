@@ -2,24 +2,26 @@
     "quiz":
         [
         {
-            "question": "Choose true sentence about qmake:",
+            "question": "What is the capital of India ?",
              "answers": [
-                 {"key":"A", "txt": "It is possible to generate both - Makefile and .pro file - with the use of qmake."},
-                 {"key":"B", "txt":"Qmake can generate Makefile, but it is not possible to generate .pro file with qmake,"},
-                 {"key":"C", "txt":"Qmake compiles the project."}      
+                 {"key":"A", "txt": "Jaipur"},
+                 {"key":"B", "txt":"Patna"},
+                 {"key":"C", "txt":"Delhi"},
+                 {"key":"D", "txt":"Lucknow"}
              ],
-            "correct": "A",
-            "hint": "In the default mode, qmake will use the description in a project file to generate a Makefile, but it is also possible to use qmake to generate project files. Source: <a href='http://doc.qt.io/qt-4.8/qmake-running.html' target='_blank'>http://doc.qt.io/qt-4.8/qmake-running.html</a>"
+            "correct": "C",
+            "hint": "The capital of India is situtated at Delhi. Source: <a href='Wikipedia page of Delhi' target='_blank'>https://en.wikipedia.org/wiki/Delhi</a>"
         },
         {
-            "question": "Choose <font color='red'>false</font> sentence about QString.",
+            "question": "Choose the <font color='red'>incorrect</font> sentence about Sachin Tendulkar",
              "answers": [
-                 {"key":"A", "txt": "QString stores the string with the use of 8-bits characters,"},
-                 {"key":"B", "txt":"QString is implemented with the use of implicit sharing for the best memory usage and performance,"},
-                 {"key":"C", "txt":"QString is the part of the QtCore module."}      
+                 {"key":"A", "txt": "Sachin has more than 50 centuries in ODI"},
+                 {"key":"B", "txt":"Sachin played for Delhi in Ranji matches"},
+                 {"key":"C", "txt":"Sachin played in IPL for Mumbai Indians"}, 
+                 {"key":"D", "txt":"Sachin is world's best cricketer "}
              ],
-            "correct": "A",
-            "hint": "QString stores a string of 16-bit QChars, where each QChar corresponds one Unicode 4.0 character. Source: <a href='http://doc.qt.io/qt-5/qstring.html' target='_blank'>http://doc.qt.io/qt-5/qstring.html</a>"
+            "correct": "B",
+            "hint": " Sachin played for Mumbai in Ranji matches"
         }
             ]
 }

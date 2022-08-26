@@ -10,7 +10,7 @@
                  {"key":"D", "txt":"Lucknow"}
              ],
             "correct": "C",
-            "hint": "The capital of India is situtated at Delhi. Source: <a href='Wikipedia page of Delhi' target='_blank'>https://en.wikipedia.org/wiki/Delhi</a>"
+            "hint": "The capital of India is situtated at Delhi. Source: <a href='https://en.wikipedia.org/wiki/Delhi' target='_blank'> Wikipedia page of Delhi</a>"
         },
         {
             "question": "Choose the <font color='red'>incorrect</font> sentence about Sachin Tendulkar",

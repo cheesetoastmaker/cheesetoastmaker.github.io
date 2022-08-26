@@ -1,0 +1,189 @@
+@property --shadow-grow {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0;
+}
+body {
+  --ctx-bg: rgb(29, 18, 47);
+  --ctx-color: rgb(240, 241, 244);
+  --accent: #ffe4c2;
+  --highlight: orange;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--ctx-color);
+  background-color: var(--ctx-bg);
+}
+
+div {
+  --shadow-pos: ;
+  --shadow-grow: 1em;
+  width: min(360px, 80%);
+  padding: 2em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 var(--shadow-grow) var(--highlight) var(--shadow-pos);
+  -webkit-animation: shadow 2s ease-in-out infinite alternate;
+          animation: shadow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes shadow {
+  0% {
+    box-shadow: 0 0 0 1em var(--highlight);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  49.999% {
+    box-shadow: 0 0 0 0 var(--highlight);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  50% {
+    box-shadow: 0 0 0 0 var(--highlight) inset;
+    --shadow-pos: inset;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    box-shadow: 0 0 0 1em var(--highlight) inset;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 0 1em var(--highlight);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  49.999% {
+    box-shadow: 0 0 0 0 var(--highlight);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  50% {
+    box-shadow: 0 0 0 0 var(--highlight) inset;
+    --shadow-pos: inset;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    box-shadow: 0 0 0 1em var(--highlight) inset;
+  }
+}
+.prop {
+  --shadow-pos: ;
+  --shadow-grow: 1em;
+  box-shadow: 0 0 0 var(--shadow-grow) var(--highlight) var(--shadow-pos);
+  -webkit-animation: shadowWithVar 2s ease-in-out infinite alternate;
+          animation: shadowWithVar 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes shadowWithVar {
+  0% {
+    --shadow-grow: 1em;
+    --shadow-pos: ;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  49.999% {
+    --shadow-pos: ;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  50% {
+    --shadow-grow: 0em;
+    --shadow-pos: inset;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    --shadow-grow: 1em;
+    --shadow-pos: inset;
+  }
+}
+
+@keyframes shadowWithVar {
+  0% {
+    --shadow-grow: 1em;
+    --shadow-pos: ;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  49.999% {
+    --shadow-pos: ;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  50% {
+    --shadow-grow: 0em;
+    --shadow-pos: inset;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    --shadow-grow: 1em;
+    --shadow-pos: inset;
+  }
+}
+.typewriter {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+}
+
+h1 {
+  font-family: monospace;
+  font-size: 30px;
+  color: white;
+  margin-top: 4rem;
+  text-align: center;
+  position: relative;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+h1::before {
+  background: #1d122f;
+  -webkit-animation: typewriter 4s steps(13) forwards 1s;
+          animation: typewriter 4s steps(13) forwards 1s;
+}
+
+h1::after {
+  width: 5px;
+  background: white;
+  -webkit-animation: blink 600ms steps(13) forwards infinite, typewriter 4s steps(13) forwards 1s;
+          animation: blink 600ms steps(13) forwards infinite, typewriter 4s steps(13) forwards 1s;
+}
+
+@-webkit-keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}

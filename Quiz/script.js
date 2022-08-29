@@ -35,7 +35,7 @@ var allQuestions =  [
     "correctAnswer":2
   },
   {
-    "question":"In which city does the India government reside?",
+    "question":"In which city \n does the India government reside?",
     "choices":["Nagpur","Delhi","Vishakapattnam","Gaya"],
     "correctAnswer":1
   },

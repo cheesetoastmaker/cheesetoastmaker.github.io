@@ -18,11 +18,13 @@ var startButton = document.getElementById("startButton"),
     form = document.form1,
     warning = document.getElementById("warning");
 
-let stringarray = ["Answer","good"];
+
 
 var allQuestions =  [
 	{
-    "question":stringarray.join('\r\n');
+     let stringy123 = ["Answer","good"];
+    "question":stringy123.join('\r\n');
+"choices":["David Cameron","Gordon Brown","No PM right now","Boris Johnson"],
     "correctAnswer":3
   },
   {

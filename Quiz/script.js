@@ -22,9 +22,7 @@ var startButton = document.getElementById("startButton"),
 
 var allQuestions =  [
 	{
-       "question":'Answer 
-		good
-		things',
+       "question":"Answer \ngood \nthings",
 "choices":["David Cameron","Gordon Brown","No PM right now","Boris Johnson"],
     "correctAnswer":3
   },

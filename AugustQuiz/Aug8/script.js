@@ -8,7 +8,7 @@ function _(x) {
 }
 
 function loadQuestionsAndStartQuiz(value) {
-    $.getJSON('https://cheesetoastmaker.github.io/AugustQuiz/question.json', function (data) {
+    $.getJSON('https://cheesetoastmaker.github.io/AugustQuiz/Aug8/question.json', function (data) {
         questions = data.quiz;
     })
         .error(function(){

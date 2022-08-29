@@ -3,17 +3,16 @@ body {
     text-align: center;
     padding: 0.9rem;
     line-height: 180%;
-    font-size: 30px
-  
+    font-size: 30px;
 }
 input[type="radio"] {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
-  transform: scale(2.5);
+  transform: scale(1.5);
 }
 
 p {
-	font-size: 50px;
+	font-size: 30px;
     padding: 10px;
 }
 
@@ -47,14 +46,12 @@ h2 {
 .quiz > #main {
 /* border:5px solid red; *//* debug*/
     margin: auto;
-    width:100%;
+    width:95%;
     text-align: left;
-	 font-size: 30px;
-   line-height:2;
-    padding: 5px;
-    background-color: black;
-    border-radius:20px;
-   color: white;
+    font-size: 24px;
+    padding: 10px;
+    background-color: #E5E4E2;
+    border-radius:16px;
 }
 
 #header {

@@ -48,7 +48,8 @@ h2 {
     margin: auto;
     width:95%;
     text-align: left;
-    font-size: 30px;
+    font-size: 40px;
+    line-height:2;
     padding: 10px;
     background-color: #E5E4E2;
     border-radius:16px;

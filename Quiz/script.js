@@ -20,7 +20,7 @@ var startButton = document.getElementById("startButton"),
 
 var allQuestions =  [
 	{
-    "question":"Who is President of the United States?             1. sjcjsncjknjdk jnjkvnvkjnf jdnjkfvnfjkn jnj                      2. djncjijifvknjfhvnvnjknv"
+    "question":"Who is President of the United States?             1. sjcjsncjknjdk jnjkvnvkjnf jdnjkfvnfjkn jnj                      2. djncjijifvknjfhvnvnjknv",
     "choices":["Donald Trump","Hillary Clinton","Barack Obama","Joe Biden"],
     "correctAnswer":3
   },

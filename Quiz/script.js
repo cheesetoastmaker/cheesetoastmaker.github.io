@@ -22,9 +22,9 @@ var startButton = document.getElementById("startButton"),
 
 var allQuestions =  [
 	{
-       "question":"Answer \ngood \nthings",
-"choices":["David Cameron","Gordon Brown","No PM right now","Boris Johnson"],
-    "correctAnswer":3
+       "question":"Who is Prime Minister of the United Kingdom?",
+    "choices":["David Cameron","Gordon Brown","No PM right now","Boris Johnson"],
+    "correctAnswer":1
   },
   {
     "question":"Who is Prime Minister of the United Kingdom?",

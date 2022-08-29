@@ -18,10 +18,11 @@ var startButton = document.getElementById("startButton"),
     form = document.form1,
     warning = document.getElementById("warning");
 
+let stringarray = ["Answer","good"];
+
 var allQuestions =  [
 	{
-    "question":'Who is President of the United States?' + 'sjcjsncjknjdk jnjkvnvkjnf \n' + 'jdnjkfvnfjkn jnj djncjijifvknjfhvnvnjknv \n',
-    "choices":["Donald Trump","Hillary Clinton","Barack Obama","Joe Biden"],
+    "question":stringarray.join('\r\n');
     "correctAnswer":3
   },
   {

@@ -1,0 +1,39 @@
+{
+    "quiz":
+        [
+{
+            "question": "Consider the following statements regarding Manual Scavenging in India: 
+
+<pre class='prettyprint'>1. In India, Uttar Pradesh recorded the highest number of manual scavenging related deaths followed by Tamil Nadu, in the past five years.<br>
+
+2. The Self-Employment Scheme for Rehabilitation of Manual Scavengers provides one-time cash assistance of Rs. 40,000 to the manual scavengers to find alternate jobs.;</pre> ",
+
+
+             "answers": [
+                 {"key":"A", "txt":"1 only"},
+                 {"key":"B", "txt":"2 only"},
+                 {"key":"C", "txt":"Both 1 and 2"},    
+        	 {"key":"D", "txt":"Neither 1 nor 2"}
+                      
+],  
+            "correct": "C",
+
+
+            "hint": 
+
+		"
+
+Manual scavenging related deaths
+
+    There are over 58,000 people engaged in manual scavenging in India.
+    The latest data show that 347 workers died while or because of cleaning sewers and septic tanks between 2017 and 2022.
+    Uttar Pradesh, which had the largest share of manual scavengers, also reported the highest number of deaths.
+    Maharashtra has the second largest number of manual scavengers in the country.
+    The Self-Employment Scheme for Rehabilitation of Manual Scavengers (SRMS) is expected to provide one-time cash assistance of rupees 40,000, skill development training, and capital subsidy for self-employment projects for workers."
+
+
+        }
+
+	]
+
+}

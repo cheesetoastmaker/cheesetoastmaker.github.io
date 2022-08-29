@@ -20,7 +20,8 @@ var startButton = document.getElementById("startButton"),
 
 var allQuestions =  [
 	{
-    "question":"Who is President of the United States?\n" + "and who won elections",
+    "question":"Who is President of the United States? \n" + \n + 
+		"and who won elections",
     "choices":["Donald Trump","Hillary Clinton","Barack Obama","Joe Biden"],
     "correctAnswer":3
   },

@@ -20,7 +20,7 @@ var startButton = document.getElementById("startButton"),
 
 var allQuestions =  [
 	{
-    "question":"Who is President of the United States?   ",
+    "question":"Who is President of the United States?\n" + "and who won elections",
     "choices":["Donald Trump","Hillary Clinton","Barack Obama","Joe Biden"],
     "correctAnswer":3
   },
@@ -35,7 +35,7 @@ var allQuestions =  [
     "correctAnswer":2
   },
   {
-    "question":"In which city \n does the India government reside?",
+    "question":"In which city does the India government reside?",
     "choices":["Nagpur","Delhi","Vishakapattnam","Gaya"],
     "correctAnswer":1
   },

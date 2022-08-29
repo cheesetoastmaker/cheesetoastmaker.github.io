@@ -1,5 +1,3 @@
-document.getElementsByTagName("h2")[0].style.fontSize = "6vw";
-document.getElementsByTagName("p")[0].style.fontSize = "6vw";
 var questions           = [];
 var totalQuestionNr     = 0;
 var currentQuestionNr   = 0;
